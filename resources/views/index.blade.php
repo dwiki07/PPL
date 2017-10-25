@@ -18,6 +18,8 @@
 				</tr>
 			</thead>
 			<tbody>
+				<th>sue</th>
+				<th>run</th>
 
 
 				@foreach($pemesanan as $pemesanan)
