@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+<h2>syalala</h2>
       <H3 align="center">CEK KUALITAS</H3>
       <div class="container-fluid xyz">
         <form method="post" class="form-tambah" action="{{ url ('kualitas/check')}}">
