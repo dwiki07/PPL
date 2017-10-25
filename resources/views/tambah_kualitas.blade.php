@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('content')
       <H3 align="center">CEK KUALITAS</H3>

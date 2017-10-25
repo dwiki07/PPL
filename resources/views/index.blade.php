@@ -18,7 +18,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<h1>creating from github</h1>
+
 
 				@foreach($pemesanan as $pemesanan)
 				<tr>
