@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-	 <a href="/pemesanan/create" class="btn btn-info" role="button" > <i class="fa fa-plus"></i> Create</a>
+	 <a href="#" class="btn btn-info" role="button" > <i class="fa fa-plus"></i> Create</a>
 	<div class="table-responsive">          
 		<table class="table">
 			<thead>
