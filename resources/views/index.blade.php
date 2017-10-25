@@ -7,14 +7,14 @@
 		<table class="table">
 			<thead>
 				<tr>
-					{{-- <th>Id</th>
+					<th>Id</th>
 					<th>Nama Pemesan</th>
 					<th>Alamat</th>
 					<th>Tujuan</th>
 					<th>Tanggal Pesan</th>
 					<th>tanggal Berangkat</th>
 					<th>total Hari</th>
-					<th>Action</th> --}}
+					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
