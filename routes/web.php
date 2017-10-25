@@ -22,3 +22,6 @@ Route::get('/index', function () {
 });
 Route::get('/kualitas', 'tambah_kualitas@index');
 Route::post('/kualitas/check', 'tambah_kualitas@check');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
