@@ -21,6 +21,7 @@ Route::get('/index', function () {
     return view('index');
 });
 Route::get('/kualitas', 'tambah_kualitas@index');
+route::post('kualitas','tambah_kualitas@store');
 Route::post('/kualitas/check', 'tambah_kualitas@check');
 Auth::routes();
 

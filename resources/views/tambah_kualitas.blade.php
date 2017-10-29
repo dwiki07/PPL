@@ -5,7 +5,7 @@
 
 <H3 align="center">CEK KUALITAS</H3>
 <div class="container-fluid xyz">
-  <form method="post" class="form-tambah" action="{{ url ('kualitas/check')}}">
+  <form action="/kualitas" method="post">
     {{csrf_field()}}
     <div class="row">
 
@@ -15,7 +15,7 @@
         <label for="Supplier">Nama Supplier</label>
       </div>
       <div class="input-field col-md-6 " >
-        <select id="Supplier" name="cek_warna" class="required" required="">
+        <select id="Supplier" name="cek" class="required" required="">
           <option value="">----Pilih----</option>
           <option value="1">Dwiki</option>
           <option value="2">Aditya</option>
@@ -183,7 +183,8 @@
   <hr>
   <div class="col-sm-3">
   </div>
-  <input type="submit" class="btn btn-primary btn-md" value="simpan"></input>  
+  <input type="submit" class="btn btn-primary btn-md" value="Create"></input>  
+  {{ csrf_field() }}
 </div>
 </div>
 @endsection

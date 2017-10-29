@@ -8,11 +8,10 @@ use App\Http\Controllers\Controller;
 use session;
 class tambah_kualitas extends Controller
 {
-	public function index(Request $Request){
+	public function index(){
 		$kualitas=kualitas::all();
 		
-		return view ('tambah_kualitas',['kualitas'=> $kualitas]);
-	}
+		return view ('tambah_kualitas');	}
 	public function check(Request $Request){
 		$hama=$Request->cek_hama;
 		$bau=$Request->cek_bau;
@@ -37,6 +36,25 @@ class tambah_kualitas extends Controller
 		}
 		
 	}
+		public function store(Request $request) {
+		$kualitas = new kualitas;
+		$kualitas->cekHama = $request->cek_hama;
+		$kualitas->cekBau = $request->cek_bau;
+		$kualitas->cekDerajatSosoh = $request->cek_derajat_sosoh;
+		$kualitas->cekKadarAir = $request->cek_kadar_air;
+		$kualitas->cekButirUtuh = $request->cek_butir_utuh;
+		$kualitas->cekButirPatah = $request->cek_butir_patah;
+		$kualitas->cekButirMenir = $request->cek_butir_menir;
+		$kualitas->cekButirHijau = $request->cek_butir_hijau;
+		$kualitas->cekButirKuningRusak = $request->cek_butir_kuning_rusak;
+		$kualitas->cekButirGabah = $request->cek_butir_gabah ;
+
+		$kualitas-> save();
+
+		return redirect('kualitas');
+
+	}
+
 	}
 	
 		
