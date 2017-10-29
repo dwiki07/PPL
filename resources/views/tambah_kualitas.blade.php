@@ -5,7 +5,8 @@
 
 <H3 align="center">CEK KUALITAS</H3>
 <div class="container-fluid xyz">
-  <form action="/kualitas" method="post">
+  <form method="post" class="form-tambah" action="{{ url ('kualitas/check')}}">
+    {{-- <form action="/kualitas" method="post"> --}}
     {{csrf_field()}}
     <div class="row">
 
@@ -15,7 +16,7 @@
         <label for="Supplier">Nama Supplier</label>
       </div>
       <div class="input-field col-md-6 " >
-        <select id="Supplier" name="cek" class="required" required="">
+        <select id="Supplier" name="cek_warna" class="required" required="" style="width:200px">
           <option value="">----Pilih----</option>
           <option value="1">Dwiki</option>
           <option value="2">Aditya</option>
@@ -31,7 +32,7 @@
       </div>
       <div class="col-md-4">
         <div class="input-field col-md-6    ">
-          <select id="cek_hama" name="cek_hama" class="required" required="">
+          <select id="cek_hama" name="cek_hama" class="required" required="" style="width:200px">
             <option value="">- Pilih -</option>
             <option value="100">Tidak Ada</option>
             <option value="50">Ada</option>
@@ -46,7 +47,7 @@
       </div>
       <div class="col-md-4">
         <div class="input-field col-md-6    ">
-          <select id="cek_bau" name="cek_bau" class="required" required="">
+          <select id="cek_bau" name="cek_bau" class="required" required="" style="width:200px">
             <option value="">- Pilih -</option>
             <option value="100">Tidak Ada</option>
             <option value="50">Ada</option>
@@ -61,7 +62,7 @@
       </div>
       <div class="col-md-4">
         <div class="input-field col-md-6    ">
-          <select id="cek_derajat_sosoh" name="cek_derajat_sosoh" class="required" required="">
+          <select id="cek_derajat_sosoh" name="cek_derajat_sosoh" class="required" required="" style="width:200px">
             <option value="">- Pilih -</option>
             <option value="100">96%-100%</option>
             <option value="80">90%-95%</option>
@@ -77,7 +78,7 @@
       </div>
       <div class="col-md-4">
        <div class="input-field col-md-6    ">
-        <select id="cek_kadar_air" name="cek_kadar_air" class="required" required="">
+        <select id="cek_kadar_air" name="cek_kadar_air" class="required" required="" style="width:200px">
           <option value="">- Pilih -</option>
           <option value="100">< 10%</option>
           <option value="80">11%-15%</option>
@@ -93,7 +94,7 @@
     </div>
     <div class="col-md-4">
       <div class="input-field col-md-6    ">
-        <select id="cek_butir_utuh" name="cek_butir_utuh" class="required" required="">
+        <select id="cek_butir_utuh" name="cek_butir_utuh" class="required" required="" style="width:200px">
           <option value="">- Pilih -</option>
           <option value="100">< 40%</option>
           <option value="80">35-40%</option>
@@ -109,7 +110,7 @@
     </div>
     <div class="col-md-4">
       <div class="input-field col-md-6    ">
-        <select id="cek_butir_patah" name="cek_butir_patah" class="required" required="">
+        <select id="cek_butir_patah" name="cek_butir_patah" class="required" required="" style="width:200px">
           <option value="">- Pilih -</option>
           <option value="100">< 10%</option>
           <option value="80">10%-20%</option>
@@ -125,7 +126,7 @@
     </div>
     <div class="col-md-4">
       <div class="input-field col-md-6    ">
-        <select id="cek_butir_menir" name="cek_butir_menir" class="required" required="">
+        <select id="cek_butir_menir" name="cek_butir_menir" class="required" required="" style="width:200px">
           <option value="">- Pilih -</option>
           <option value="100">0%</option>
           <option value="80">1%-3%</option>
@@ -141,7 +142,7 @@
     </div>
     <div class="col-md-4">
       <div class="input-field col-md-6    ">
-        <select id="cek_butir_hijau" name="cek_butir_hijau" class="required" required="">
+        <select id="cek_butir_hijau" name="cek_butir_hijau" class="required" required="" style="width:200px">
           <option value="">- Pilih -</option>
           <option value="100">Tidak Ada</option>
           <option value="50">Ada</option>
@@ -156,7 +157,7 @@
     </div>
     <div class="col-md-4">
       <div class="input-field col-md-6    ">
-        <select id="cek_butir_kuning_rusak" name="cek_butir_kuning_rusak" class="required" required="">
+        <select id="cek_butir_kuning_rusak" name="cek_butir_kuning_rusak" class="required" required="" style="width:200px">
           <option value="">- Pilih -</option>
           <option value="100">Tidak Ada</option>
           <option value="50">Ada</option>
@@ -171,7 +172,7 @@
     </div>
     <div class="col-md-4">
       <div class="input-field col-md-6 ">
-        <select id="cek_butir_gabah" name="cek_butir_gabah" class="required" required="">
+        <select id="cek_butir_gabah" name="cek_butir_gabah" class="required" required="" style="width:200px">
           <option value="">- Pilih -</option>
           <option value="100">Tidak Ada</option>
           <option value="80">0-20 butir/Kg</option>
@@ -181,9 +182,8 @@
     </div>
   </div>
   <hr>
-  <div class="col-sm-3">
   </div>
-  <input type="submit" class="btn btn-primary btn-md" value="Create"></input>  
+  <input type="submit" class="btn btn-primary btn-md" value="Check" style="width:790px"></input>  
   {{ csrf_field() }}
 </div>
 </div>

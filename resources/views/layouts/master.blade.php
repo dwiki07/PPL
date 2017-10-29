@@ -64,7 +64,7 @@ desired effect
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>A</b>LT</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Admin</b>LTE</span>
+        <span class="logo-lg"><b>SKURAS</b></span>
       </a>
 
       <!-- Header Navbar -->
@@ -121,8 +121,8 @@ desired effect
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu" data-widget="tree">
           <!-- Optionally, you can add icons to the links -->
-          <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-          <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+          <li ><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
+          <li class="active"><a href="#"><i class="fa fa-list-alt"></i> <span>Kualitas</span></a></li>
           <li class="treeview">
             <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
               <span class="pull-right-container">
