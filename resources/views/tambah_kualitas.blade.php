@@ -12,7 +12,7 @@
 
 
 
-      <div class="col-md-6 " >
+      <div class="col-md-4 " >
         <label for="Supplier">Nama Supplier</label>
       </div>
       <div class="input-field col-md-6 " >
