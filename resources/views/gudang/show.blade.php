@@ -24,7 +24,7 @@
 				@foreach($gudang as $gudang)
 				<tr>
 					<td>
-						{{$gudang->id_gabah}}
+						{{$gudang->id}}
 					</td>
 					<td>
 						{{$gudang->tanggalPenerimaan}}
@@ -51,11 +51,11 @@
 						{{$gudang->jumlahBeras}}
 					</td>
 					<td>
-						<button class="btn btn-info" onclick="location.href='/gudang/{{$gudang->id_gabah}}/edit';" >Edit
+						<button class="btn btn-info" onclick="location.href='/gudang/{{$gudang->id}}/edit';" >Edit
 						</button>
 					</td>
 					<td>
-						<form action="/gudang/{{$gudang->id_gabah}}" method="post">
+						<form action="/gudang/{{$gudang->id}}" method="post">
 							<input class="btn btn-info" type="submit" name="submit" value="Delete"/>
 
 							{{csrf_field()}}

@@ -22,11 +22,11 @@
 	<div class="col-md-4"></div>
 	<div class="col-md-3">
 	Harga Gabah</div>
-	<input type="date" name="hargaGabah" value="{{$gudang->hargaGabah}}"> <hr>
+	<input type="text" name="hargaGabah" value="{{$gudang->hargaGabah}}"> <hr>
 	<div class="col-md-4"></div>
 	<div class="col-md-3">
 	Id Supplier</div> 
-	<input type="date" name="IdSupplier" value="{{$gudang->IdSupplier}}"> <hr>
+	<input type="text" name="IdSupplier" value="{{$gudang->IdSupplier}}"> <hr>
 	<div class="col-md-4"></div>
 	<div class="col-md-3">
 	Tanggal Masuk Beras</div>

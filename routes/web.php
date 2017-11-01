@@ -27,10 +27,10 @@ Auth::routes();
 
 route::get('gudang/create','gudangcontroller@create');
 route::get('gudang','gudangcontroller@index');
-route::get('/gudang/{id_gabah}/edit','gudangcontroller@edit');
-route::put('/gudang/{id_gabah}','gudangcontroller@update');
+route::get('/gudang/{id}/edit','gudangcontroller@edit');
+route::put('/gudang/{id}','gudangcontroller@update');
 route::post('gudang','gudangcontroller@store');
-route::delete('/gudang/{id_gabah}','gudangcontroller@destroy');
+route::delete('/gudang/{id}','gudangcontroller@destroy');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

@@ -2,43 +2,46 @@
 
 @section('content')
 
-<form action="/gudang" method="post">
-	<h3 align="center">CREATE gudang</h3>
+<form action="" method="post">
+	<h3 align="center">CREATE</h3>
+	<br>
 	<br>
 	<div class="col-md-4"></div>
 	<div class="col-md-3">
-	Nama Pemesan </div>
-	<input type="text" name="nama" /> <hr>
-	<div class="col-md-4"></div>
-	<div class="col-md-3"> 
-	Alamat </div>
-	<input type="text" name="alamat"/> <hr>
+	Tanggal Penerimaan 
+	</div>
+	<input type="date" name="tanggalPenerimaan"/><hr>
 	<div class="col-md-4"></div>
 	<div class="col-md-3">
-	tujuan </div>
-	<select name="tujuan">
-		<option>Pilih</option>
-		<option>Surabaya</option>
-		<option>Malang</option>
-		<option>Jogja</option>
-		<option>Bali</option>
-	</select><hr>
+	Tanggal Penggilingan</div> 
+	<input type="date" name="tanggalPenggilingan"/> <hr>
 	<div class="col-md-4"></div>
 	<div class="col-md-3">
-	tanggalPesan </div>
-	<input type="date" name="tanggalPesan"> <hr>
+	Jumlah Gabah </div>
+	<input type="text" name="jumlahGabah"/> <hr>
 	<div class="col-md-4"></div>
 	<div class="col-md-3">
-	tanggalBerangkat </div>
-	<input type="date" name="tanggalBerangkat"> <hr>
+	Harga Gabah</div>
+	<input type="text" name="hargaGabah"> <hr>
 	<div class="col-md-4"></div>
 	<div class="col-md-3">
- 	totalHari </div>
-	<input type="number" name="totalHari"> <hr>
+	Id Supplier</div> 
+	<input type="text" name="IdSupplier"> <hr>
 	<div class="col-md-4"></div>
-	<div class="col-md-3"></div>
+	<div class="col-md-3">
+	Tanggal Masuk Beras</div>
+	<input type="date" name="tanggalMasuk"> <hr>
+	<div class="col-md-4"></div>
+	<div class="col-md-3">
+	Tanggal Keluar Beras</div>
+	<input type="date" name="tanggalKeluar""> <hr>
+	<div class="col-md-4"></div>
+	<div class="col-md-3">
+	Jumlah Beras</div>
+	<input type="number" name="jumlahBeras""> <hr>
+	<div class="col-md-8"></div>
 	<a href="/gudang" class="btn btn-warning" role="button">Cancel</a>
-	<input type="submit" class="btn btn-primary" name="submit" value="Create">
+	<input class="btn btn-info" type="submit" name="submit" value="save"  > 
 
 	{{ csrf_field() }}
 
