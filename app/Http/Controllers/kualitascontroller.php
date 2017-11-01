@@ -60,7 +60,7 @@ class kualitascontroller extends Controller
 
 	}
 		public function create(){
-		return view('kualitas/create');	
+		return view('kualitas/create');		
 		}
 
 	}

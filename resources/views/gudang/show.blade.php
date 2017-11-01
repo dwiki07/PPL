@@ -51,6 +51,7 @@
 						{{$gudang->jumlahBeras}}
 					</td>
 					<td>
+						
 						<button class="btn btn-info" onclick="location.href='/gudang/{{$gudang->id}}/edit';" >Edit
 						</button>
 					</td>
