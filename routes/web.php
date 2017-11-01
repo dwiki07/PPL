@@ -25,6 +25,13 @@ route::post('kualitas','tambah_kualitas@store');
 Route::post('/kualitas/check', 'tambah_kualitas@check');
 Auth::routes();
 
+route::get('gudang/create','gudangcontroller@create');
+route::get('gudang','gudangcontroller@index');
+route::get('/gudang/{id_gabah}/edit','gudangcontroller@edit');
+route::put('/gudang/{id_gabah}','gudangcontroller@update');
+route::post('gudang','gudangcontroller@store');
+route::delete('/gudang/{id_gabah}','gudangcontroller@destroy');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
