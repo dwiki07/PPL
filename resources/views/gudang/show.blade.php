@@ -4,18 +4,18 @@
 <div class="container">
 	 <a href="/gudang/create" class="btn btn-info" role="button" > <i class="fa fa-plus"></i> Create</a>
 	<div class="table-responsive">          
-		<table class="table"> {{-- ini table --}}
+		<table class="table tabel-striped"> {{-- ini table --}}
 			<thead>
 				<tr>
 					<th>Id Gabah</th>
 					<th>Tanggal Penerimaan</th>
 					<th>Tanggal Penggilingan</th>
-					<th>Jumlah Gabah</th>
+					<th>Jumlah Gabah (Kw)</th>
 					<th>Harga Gabah</th>
 					<th>ID Supplier</th>
 					<th>Tanggal Masuk </th>
 					<th>Tanggal Keluar</th>
-					<th>Jumlah Beras</th>
+					<th>Jumlah Beras(Kw)</th>
 					<th>Action</th>
 				</tr>
 			</thead>

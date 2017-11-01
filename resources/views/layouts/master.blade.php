@@ -62,7 +62,7 @@ desired effect
       <!-- Logo -->
       <a href="index2.html" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>A</b>LT</span>
+        <span class="logo-mini"><b>S</b>RS</span>
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg"><b>SKURAS</b></span>
       </a>
@@ -83,7 +83,7 @@ desired effect
                 <!-- The user image in the navbar-->
                 <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                <span class="hidden-xs">Alexander Pierce</span>
+                <span class="hidden-xs">{{ Auth::user()->name }}</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- The user image in the menu -->
@@ -103,7 +103,9 @@ desired effect
                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                   </div>
                   <div class="pull-right">
-                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                    <a <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();" class="btn btn-default btn-flat">Sign out</a>
                   </div>
                 </li>
               </ul>
@@ -121,19 +123,9 @@ desired effect
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu" data-widget="tree">
           <!-- Optionally, you can add icons to the links -->
-          <li ><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-          <li class="active"><a href="#"><i class="fa fa-list-alt"></i> <span>Kualitas</span></a></li>
-          <li class="treeview">
-            <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="#">Link in level 2</a></li>
-              <li><a href="#">Link in level 2</a></li>
-            </ul>
-          </li>
+          <li ><a href="#"><i class="fa fa-home"></i> <span>Beranda</span></a></li>
+          <li ><a href="kualitas"><i class="fa fa-list-alt"></i> <span>Kualitas</span></a></li>
+          <li ><a href="gudang"><i class="fa fa-cubes"></i> <span>Gudang</span></a></li>
         </ul>
         <!-- /.sidebar-menu -->
       </section>

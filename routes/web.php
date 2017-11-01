@@ -20,17 +20,19 @@ Route::get('/dash', function () {
 Route::get('/index', function () {
     return view('index');
 });
-Route::get('/kualitas', 'tambah_kualitas@index');
-route::post('kualitas','tambah_kualitas@store');
-Route::post('/kualitas/check', 'tambah_kualitas@check');
+Route::get('kualitas', 'kualitascontroller@index');
+Route::get('kualitas/create', 'kualitascontroller@create');
+route::post('kualitas','kualitascontroller@store');
+Route::post('kualitas/check', 'kualitascontroller@check');
+
 Auth::routes();
 
 route::get('gudang/create','gudangcontroller@create');
 route::get('gudang','gudangcontroller@index');
-route::get('/gudang/{id}/edit','gudangcontroller@edit');
-route::put('/gudang/{id}','gudangcontroller@update');
+route::get('gudang/{id}/edit','gudangcontroller@edit');
+route::put('gudang/{id}','gudangcontroller@update');
 route::post('gudang','gudangcontroller@store');
-route::delete('/gudang/{id}','gudangcontroller@destroy');
+route::delete('gudang/{id}','gudangcontroller@destroy');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
