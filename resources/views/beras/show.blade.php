@@ -1,47 +1,43 @@
 @extends('layouts.master')
 
 @section('content')
+
 <div class="container">
-	 <a href="/gudang/create" class="btn btn-info" role="button" > <i class="fa fa-plus"></i> Create</a>
+	 <a href="/beras/create" class="btn btn-info" role="button" > <i class="fa fa-plus"></i> Create</a>
 	<div class="table-responsive">          
 		<table class="table table-striped"> {{-- ini table --}}
 			<thead>
 				<tr>
-					<th>Id Gabah</th>
-					<th>Tanggal Penerimaan</th>
-					<th>Tanggal Penggilingan</th>
-					<th>Jumlah Gabah (Ton)</th>
-					<th>Harga Gabah</th>
+					<th>Id Supplier</th>
+					<th>Tanggal Masuk</th>
+					<th>Tanggal keluar</th>
+					<th>Jumlah Beras (Ton)</th>
 					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
 
-				@foreach($gudang as $gudang)
+				@foreach($beras as $beras)
 				<tr>
 					<td>
-						{{$gudang->id}}
+						{{$beras->id}}
 					</td>
 					<td>
-						{{$gudang->tanggalPenerimaan}}
+						{{$beras->tanggalMasuk}}
 					</td>
 					<td>
-						{{$gudang->tanggalPenggilingan}}
+						{{$beras->tanggalKeluar}}
 					</td>
 					<td>
-						{{$gudang->jumlahGabah}}
+						{{$beras->jumlahBeras}}
 					</td>
-					<td>
-						{{$gudang->hargaGabah}}
-					</td>
-
 					<td>
 						
-						<button class="btn btn-info" onclick="location.href='/gudang/{{$gudang->id}}/edit';" >Edit
+						<button class="btn btn-info" onclick="location.href='/beras/{{$beras->id}}/edit';" >Edit
 						</button>
 					</td>
 					<td>
-						<form action="/gudang/{{$gudang->id}}" method="post">
+						<form action="/beras/{{$beras->id}}" method="post">
 							<input class="btn btn-info" type="submit" name="submit" value="Delete"/>
 
 							{{csrf_field()}}

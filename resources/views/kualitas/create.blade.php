@@ -6,8 +6,9 @@
 <H3 align="center">CEK KUALITAS</H3>
 <div class="container-fluid xyz">
   <form method="post" class="form-tambah" action="{{ url ('kualitas/check')}}">
-    {{-- <form action="/kualitas" method="post"> --}}
-    {{csrf_field()}}
+
+{{-- <form action="/kualitas" method="post"> --}}
+      {{-- {{csrf_field()}} --}}
     {{-- <div class="row">
 
 
@@ -192,13 +193,20 @@
     </div>
   </div>
   <br>
-  </div>
+
+
   <div class="col-md-4"></div>
   <div class="row">
-  <input type="submit" class="btn btn-primary btn-md" value="Check" style="width:490px"></input>  
+    <input type="submit" class="btn btn-primary btn-md" name="submit" value="Check" style="width:490px"></input>  
+    {{ csrf_field() }}
+  </div>
+
+</form>
+
+
+
+
 </div>
-  {{ csrf_field() }}
-</div>
-</div>
+
 @endsection
 

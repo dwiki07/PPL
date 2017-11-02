@@ -23,22 +23,6 @@
 	<div class="col-md-3">
 	Harga Gabah</div>
 	<input type="text" name="hargaGabah"> <hr>
-	<div class="col-md-4"></div>
-	<div class="col-md-3">
-	Id Supplier</div> 
-	<input type="text" name="IdSupplier"> <hr>
-	<div class="col-md-4"></div>
-	<div class="col-md-3">
-	Tanggal Masuk Beras</div>
-	<input type="date" name="tanggalMasuk"> <hr>
-	<div class="col-md-4"></div>
-	<div class="col-md-3">
-	Tanggal Keluar Beras</div>
-	<input type="date" name="tanggalKeluar"> <hr>
-	<div class="col-md-4"></div>
-	<div class="col-md-3">
-	Jumlah Beras (Kw)</div>
-	<input type="number" name="jumlahBeras"> <hr>
 	<div class="col-md-8"></div>
 	<a href="/gudang" class="btn btn-warning" role="button">Cancel</a>
 	<input class="btn btn-info" type="submit" name="submit" value="save"  > 

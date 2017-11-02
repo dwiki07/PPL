@@ -12,6 +12,8 @@ class kualitascontroller extends Controller
 		$kualitas=kualitas::all();
 		
 		return view ('kualitas/show', ['kualitas' => $kualitas]);	}
+
+		
 	public function check(Request $Request){
 
 		$hama 					=$Request->cek_hama;

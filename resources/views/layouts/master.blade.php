@@ -123,9 +123,18 @@ desired effect
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu" data-widget="tree">
           <!-- Optionally, you can add icons to the links -->
-          <li ><a href="#"><i class="fa fa-home"></i> <span>Beranda</span></a></li>
+          <li ><a href="beranda"><i class="fa fa-home"></i> <span>Beranda</span></a></li>
           <li ><a href="kualitas"><i class="fa fa-list-alt"></i> <span>Kualitas</span></a></li>
-          <li ><a href="gudang"><i class="fa fa-cubes"></i> <span>Gudang</span></a></li>
+          <li class="treeview">
+          <a href="#"><i class="fa fa-cubes"></i> <span>Gudang</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="gudang">Gabah</a></li>
+            <li><a href="beras">Beras</a></li>
+          </ul>
         </ul>
         <!-- /.sidebar-menu -->
       </section>

@@ -19,6 +19,7 @@
 					<th>Butir Kuning Rusak</th>
 					<th>Butir Gabah</th>
 					<th>Kualitas</th>
+					<th>Tanggal</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -60,6 +61,9 @@
 					</td>
 					<td>
 						{{$kualitas->kualitas}}
+					</td>
+					<td>
+						{{$kualitas->created_at}}
 					</td>
 				</tr>
 				@endforeach

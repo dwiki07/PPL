@@ -12,7 +12,7 @@ class gudangcontroller extends Controller
 	public function index(Request $Request) {
 
 		$gudang = gudang::all();
-
+		
 		return view('gudang/show', ['gudang' => $gudang]);
 	}
 
@@ -23,14 +23,10 @@ class gudangcontroller extends Controller
 	}
 	public function store(Request $request) {
 		$gudang = new gudang;
-		$gudang->tangalPenerimaan = $request->tanggalPenerimaan;
+		$gudang->tanggalPenerimaan = $request->tanggalPenerimaan;
 		$gudang->tanggalPenggilingan = $request->tanggalPenggilingan;
 		$gudang->jumlahGabah = $request->jumlahGabah;
 		$gudang->hargaGabah = $request->hargaGabah;
-		$gudang->IdSupplier = $request->IdSupplier;
-		$gudang->tanggalMasuk = $request->tanggalMasuk;
-		$gudang->tanggalKeluar = $request->tanggalKeluar;
-		$gudang->jumlahBeras= $request->jumlahBeras;
 
 		$gudang-> save();
 
@@ -49,14 +45,10 @@ class gudangcontroller extends Controller
 
 	public function update($id , Request $request) {
 		$gudang = gudang::find($id);
-		$gudang->tangalPenerimaan = $request->tanggalPenerimaan;
+		$gudang->tanggalPenerimaan = $request->tanggalPenerimaan;
 		$gudang->tanggalPenggilingan = $request->tanggalPenggilingan;
 		$gudang->jumlahGabah = $request->jumlahGabah;
 		$gudang->hargaGabah = $request->hargaGabah;
-		$gudang->IdSupplier = $request->IdSupplier;
-		$gudang->tanggalMasuk = $request->tanggalMasuk;
-		$gudang->tanggalKeluar = $request->tanggalKeluar;
-		$gudang->jumlahBeras= $request->jumlahBeras;
 		$gudang-> save();
 
 		return redirect('gudang');
