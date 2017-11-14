@@ -8,7 +8,19 @@
 	<br>
 	<div class="col-md-4"></div>
 	<div class="col-md-3">
-	Tanggal Penerimaan 
+	Id Supplier</div>
+	<div class="input-field">
+		<select id="accessRight" name="accessRight" class="required" required="" style="width:200px">
+			<option value="">- Pilih -</option>
+			@foreach($supplier as $supplier)
+			<option value={{$supplier->id}}>{{$supplier->namaSupplier}}</option>
+			@endforeach
+		</select>
+	</div>
+	<hr>
+	<div class="col-md-4"></div>
+	<div class="col-md-3">
+		Tanggal Penerimaan 
 	</div>
 	<input type="date" name="tanggalPenerimaan" value="{{$gudang->tanggalPenerimaan}}" /><hr>
 	<div class="col-md-4"></div>

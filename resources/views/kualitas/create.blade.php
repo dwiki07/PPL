@@ -2,9 +2,8 @@
 
 @section('content')
 
-
 <H3 align="center">CEK KUALITAS</H3>
-<div class="container-fluid xyz">
+<div class="container">
   <form method="post" class="form-tambah" action="{{ url ('kualitas/check')}}">
 
 {{-- <form action="/kualitas" method="post"> --}}
@@ -26,6 +25,22 @@
         </select>
       </div>
     </div> --}}
+    <div class="col-md-4"></div>
+    <div class="row">
+      <div class="col-md-2">
+        <label for="Hama">Id supplier</label>
+      </div>
+      <div class="col-md-4">
+        <div class="input-field col-md-6    ">
+         <select id="supplier" name="supplier" class="required" required="" style="width:200px">
+      <option value="">- Pilih -</option>
+      @foreach($supplier as $supplier)
+      <option value={{$supplier->namaSupplier}}>{{$supplier->namaSupplier}}</option>
+      @endforeach
+    </select>
+        </div>
+      </div>
+    </div>
     <br>
     <div class="col-md-4"></div>
     <div class="row">
@@ -197,7 +212,7 @@
 
   <div class="col-md-4"></div>
   <div class="row">
-    <input type="submit" class="btn btn-primary btn-md" name="submit" value="Check" style="width:490px"></input>  
+    <input type="submit" class="btn btn-primary btn-md" name="submit" value="Check" style="width:450px"></input>  
     {{ csrf_field() }}
   </div>
 
@@ -207,6 +222,7 @@
 
 
 </div>
+
 
 @endsection
 

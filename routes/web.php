@@ -20,6 +20,7 @@ Route::get('/dash', function () {
 Route::get('/index', function () {
     return view('index');
 });
+Route::get('hasil', 'kualitascontroller@hasilCheck');
 Route::get('kualitas', 'kualitascontroller@index');
 Route::get('kualitas/create', 'kualitascontroller@create');
 route::post('kualitas','kualitascontroller@store');
@@ -34,14 +35,18 @@ route::get('gudang','gudangcontroller@index');
 route::get('gudang/{id}/edit','gudangcontroller@edit');
 route::put('gudang/{id}','gudangcontroller@update');
 route::post('gudang','gudangcontroller@store');
-route::delete('gudang/{id}','gudangcontroller@destroy');
 
 route::get('beras/create','berascontroller@create');
 route::get('beras','berascontroller@index');
 route::get('beras/{id}/edit','berascontroller@edit');
 route::put('beras/{id}','berascontroller@update');
 route::post('beras','berascontroller@store');
-route::delete('beras/{id}','berascontroller@destroy');
+
+route::get('supplier','supplierController@index');
+route::get('supplier/create','supplierController@create');
+route::post('supplier','supplierController@store');
+route::get('supplier/{id}/edit','supplierController@edit');
+route::put('supplier/{id}','supplierController@update');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

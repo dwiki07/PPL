@@ -8,17 +8,26 @@
 	<br>
 	<div class="col-md-4"></div>
 	<div class="col-md-3">
-	Tanggal Penerimaan 
+	Id Supplier</div>
+	<div class="input-field">
+		<select id="supplier" name="supplier" class="required" required="" style="width:200px">
+			<option value="">- Pilih -</option>
+			@foreach($supplier as $supplier)
+			<option value={{$supplier->id}}>{{$supplier->namaSupplier}}</option>
+			@endforeach
+		</select>
 	</div>
-	<input type="date" name="tanggalPenerimaan"/><hr>
+	<hr>
 	<div class="col-md-4"></div>
 	<div class="col-md-3">
-	Tanggal Penggilingan</div> 
-	<input type="date" name="tanggalPenggilingan"/> <hr>
+		Tanggal Penerimaan
+	</div>
+	<input style="width: 200px" type="date" name="tanggalPenerimaan"/><hr>
 	<div class="col-md-4"></div>
+	
 	<div class="col-md-3">
-	Jumlah Gabah (Kw) </div>
-	<input type="text" name="jumlahGabah"/> <hr>
+	Jumlah Gabah (Ton) </div>
+	<input type="number" name="jumlahGabah"/> <hr>
 	<div class="col-md-4"></div>
 	<div class="col-md-3">
 	Harga Gabah</div>
@@ -31,4 +40,3 @@
 
 </form>
 @endsection
- 

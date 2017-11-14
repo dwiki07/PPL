@@ -7,6 +7,7 @@
 		<table class="table table-striped"> {{-- ini table --}}
 			<thead>
 				<tr>
+					<th>Id Supplier</th>
 					<th>Id Gabah</th>
 					<th>Tanggal Penerimaan</th>
 					<th>Tanggal Penggilingan</th>
@@ -19,6 +20,9 @@
 
 				@foreach($gudang as $gudang)
 				<tr>
+					<td>
+						{{$gudang->idSupplier}}
+					</td>
 					<td>
 						{{$gudang->id}}
 					</td>
@@ -40,14 +44,7 @@
 						<button class="btn btn-info" onclick="location.href='/gudang/{{$gudang->id}}/edit';" >Edit
 						</button>
 					</td>
-					<td>
-						<form action="/gudang/{{$gudang->id}}" method="post">
-							<input class="btn btn-info" type="submit" name="submit" value="Delete"/>
-
 							{{csrf_field()}}
-							<input type="hidden" name="_method" value="delete"/>
-						</form>
-					</td>
 				</tr>
 				@endforeach
 			</tbody>

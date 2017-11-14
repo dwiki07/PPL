@@ -49,10 +49,4 @@ class berascontroller extends Controller
 
 		return redirect('beras');
 	}	
-	public function destroy($id) {
-		$beras = beras::find($id);
-		$beras->delete();
-
-		return redirect('beras');
-	}
 }

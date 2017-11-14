@@ -53,7 +53,7 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini" ">
   <div class="wrapper">
 
     <!-- Main Header -->
@@ -81,15 +81,14 @@ desired effect
               <!-- Menu Toggle Button -->
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <!-- The user image in the navbar-->
-                <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                <img src="ganteng.jpg" class="user-image" alt="User Image">
                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
                 <span class="hidden-xs">{{ Auth::user()->name }}</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- The user image in the menu -->
                 <li class="user-header">
-                  <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
+                  <img src="ganteng.jpg" class="img-circle" alt="User Image">
                   <p>
                     Alexander Pierce - Web Developer
                     <small>Member since Nov. 2012</small>
@@ -124,7 +123,7 @@ desired effect
         <ul class="sidebar-menu" data-widget="tree">
           <!-- Optionally, you can add icons to the links -->
           <li ><a href="beranda"><i class="fa fa-home"></i> <span>Beranda</span></a></li>
-          <li ><a href="kualitas"><i class="fa fa-list-alt"></i> <span>Kualitas</span></a></li>
+          <li ><a href="kualitas/create"><i class="fa fa-list-alt"></i> <span>Kualitas</span></a></li>
           <li class="treeview">
           <a href="#"><i class="fa fa-cubes"></i> <span>Gudang</span>
             <span class="pull-right-container">
@@ -135,6 +134,7 @@ desired effect
             <li><a href="gudang">Gabah</a></li>
             <li><a href="beras">Beras</a></li>
           </ul>
+          <li ><a href="supplier"><i class="fa fa-users"></i> <span>Supplier</span></a></li>
         </ul>
         <!-- /.sidebar-menu -->
       </section>

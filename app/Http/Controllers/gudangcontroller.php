@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\gudang;
+use App\beras;
+use App\supplier;
 use App\Http\Controllers\Controller;
 use session;
 class gudangcontroller extends Controller
@@ -18,17 +20,19 @@ class gudangcontroller extends Controller
 
 	public function create()
 	{
-		return view('gudang/create');
+		$supplier = supplier::all();
+		return view('gudang/create', ['supplier' => $supplier]);
 
 	}
 	public function store(Request $request) {
 		$gudang = new gudang;
+		$gudang->idSupplier = $request->idSupplier;
 		$gudang->tanggalPenerimaan = $request->tanggalPenerimaan;
 		$gudang->tanggalPenggilingan = $request->tanggalPenggilingan;
 		$gudang->jumlahGabah = $request->jumlahGabah;
 		$gudang->hargaGabah = $request->hargaGabah;
-
 		$gudang-> save();
+
 
 		return redirect('gudang');
 
@@ -37,14 +41,17 @@ class gudangcontroller extends Controller
 	public function edit($id) {
 
 		$gudang = gudang::find($id);
+		$supplier = supplier::all();
+
 
 		if(!$gudang)
 			abort(404);
-		return view('gudang/edit', ['gudang' => $gudang]);
+		return view('gudang/edit', ['gudang' => $gudang,'supplier' => $supplier]);
 	}
 
 	public function update($id , Request $request) {
 		$gudang = gudang::find($id);
+		$gudang->idSupplier = $request->idSupplier;
 		$gudang->tanggalPenerimaan = $request->tanggalPenerimaan;
 		$gudang->tanggalPenggilingan = $request->tanggalPenggilingan;
 		$gudang->jumlahGabah = $request->jumlahGabah;
@@ -53,10 +60,4 @@ class gudangcontroller extends Controller
 
 		return redirect('gudang');
 	}	
-	public function destroy($id) {
-		$gudang = gudang::find($id);
-		$gudang->delete();
-
-		return redirect('gudang');
-	}
 }
