@@ -7,6 +7,9 @@
 <br>
 <br>
 <div class="col-md-4"></div>
+<div class="col-md-4">
+<label>Id Gabah :</label></div><label>{{$kualitas->idGabah}}</label><br><hr>
+<div class="col-md-4"></div>
 <label>Hasil</label><br>
 <div class="col-md-4"></div>
 <div class="col-md-4">

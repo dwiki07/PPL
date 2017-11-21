@@ -3,15 +3,17 @@
 @section('content')
 
 <div class="container">
-	 <a href="/beras/create" class="btn btn-info" role="button" > <i class="fa fa-plus"></i> Create</a>
+	<center><h2>Gudang Beras</h2> </center>
 	<div class="table-responsive">          
 		<table class="table table-striped"> {{-- ini table --}}
 			<thead>
 				<tr>
 					<th>Id Beras</th>
+					<th>Id Gabah</th>
 					<th>Tanggal Masuk</th>
 					<th>Tanggal keluar</th>
 					<th>Jumlah Beras (Ton)</th>
+					<th>Kualitas</th>
 					<th>Action</th>
 				</tr>
 			</thead>
@@ -23,6 +25,9 @@
 						{{$beras->id}}
 					</td>
 					<td>
+						{{$beras->idGabah}}
+					</td>
+					<td>
 						{{$beras->tanggalMasuk}}
 					</td>
 					<td>
@@ -30,6 +35,9 @@
 					</td>
 					<td>
 						{{$beras->jumlahBeras}}
+					</td>
+					<td>
+						{{$beras->kualitas}}
 					</td>
 					<td>
 						

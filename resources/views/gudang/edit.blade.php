@@ -10,7 +10,7 @@
 	<div class="col-md-3">
 	Id Supplier</div>
 	<div class="input-field">
-		<select id="accessRight" name="accessRight" class="required" required="" style="width:200px">
+		<select id="Supplier" name="supplier" class="required" required="" style="width:200px">
 			<option value="">- Pilih -</option>
 			@foreach($supplier as $supplier)
 			<option value={{$supplier->id}}>{{$supplier->namaSupplier}}</option>

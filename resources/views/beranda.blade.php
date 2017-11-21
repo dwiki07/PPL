@@ -7,30 +7,32 @@
 		<table class="table table-striped"> {{-- ini table --}}
 			<thead>
 				<tr>
-					<th>Id Supplier</th>
 					<th>Id Kualitas</th>
 					<th>Tanggal</th>
 					<th>Kualitas</th>
+					<th>Nama Supplier</th>
 				</tr>
 			</thead>
 			<tbody>
 
-				@foreach($kualitas as $kualitas )
+				@foreach($beranda as $beranda )
+				
 				<tr>
 					<td>
-						{{$kualitas->idSupplier}}
+						{{$beranda->id_kualitas}}
 					</td>
 					<td>
-						{{$kualitas->id_kualitas}}
+						{{$beranda->created_at}}
 					</td>
 					<td>
-						{{$kualitas->created_at}}
+						{{$beranda->kualitas}}
 					</td>
 					<td>
-						{{$kualitas->kualitas}}
+						{{$beranda->namaSupplier}}
 					</td>
 				</tr>
 				@endforeach
+				
 			</tbody>
 		</table>
 	</div>

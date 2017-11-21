@@ -22,7 +22,7 @@ Route::get('/index', function () {
 });
 Route::get('hasil', 'kualitascontroller@hasilCheck');
 Route::get('kualitas', 'kualitascontroller@index');
-Route::get('kualitas/create', 'kualitascontroller@create');
+Route::get('kualitas/{id}/create', 'kualitascontroller@create');
 route::post('kualitas','kualitascontroller@store');
 Route::post('kualitas/check', 'kualitascontroller@check');
 

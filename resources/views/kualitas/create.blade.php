@@ -5,43 +5,29 @@
 <H3 align="center">CEK KUALITAS</H3>
 <div class="container">
   <form method="post" class="form-tambah" action="{{ url ('kualitas/check')}}">
-
-{{-- <form action="/kualitas" method="post"> --}}
-      {{-- {{csrf_field()}} --}}
-    {{-- <div class="row">
-
-
-
-      <div class="col-md-4 " >
-        <label for="Supplier">Nama Supplier</label>
-      </div>
-      <div class="input-field col-md-6 " >
-        <select id="Supplier" name="cek_warna" class="required" required="" style="width:200px">
-          <option value="">----Pilih----</option>
-          <option value="1">Dwiki</option>
-          <option value="2">Aditya</option>
-          <option value="3">Indarto</option>
-          <option value="4">Ganteng</option>
-        </select>
-      </div>
-    </div> --}}
     <div class="col-md-4"></div>
     <div class="row">
       <div class="col-md-2">
-        <label for="Hama">Id supplier</label>
+        <label for="Hama">Id Gabah</label>
       </div>
       <div class="col-md-4">
-        <div class="input-field col-md-6    ">
-         <select id="supplier" name="supplier" class="required" required="" style="width:200px">
-      <option value="">- Pilih -</option>
-      @foreach($supplier as $supplier)
-      <option value={{$supplier->namaSupplier}}>{{$supplier->namaSupplier}}</option>
-      @endforeach
-    </select>
+        <div class="col-md-6">
+          <input type="text" name="gabah2" id="gabah2" value="{{$id}}" disabled="" class="btn disabled" style="width: 200px" />
+          <input type="hidden" name="gabah" id="gabah" value="{{$id}}"  />
         </div>
       </div>
     </div>
     <br>
+    <div class="col-md-4"></div>
+    <div class="row">
+    <div class="col-md-2">
+    <label>Jumlah Beras</label></div>
+    <div class="col-md-4">
+      <div class="col-md-6">
+    <input type="number" name="jumlahBeras" style="width: 200px">
+    </div>
+  </div>
+    </div> <br>
     <div class="col-md-4"></div>
     <div class="row">
       <div class="col-md-2">

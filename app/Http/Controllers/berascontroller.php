@@ -4,13 +4,18 @@ namespace App\Http\Controllers;
 use App\beras;
 use Illuminate\Http\Request;
 use session;
+use DB;
 use App\Http\Controllers\Controller;
 class berascontroller extends Controller
 {
     public function index(Request $Request) {
 
-		$beras = beras::all();
-		
+		$beras = DB::table('beras')
+		->join('gudangs', 'gudangs.id', '=', 'beras.idGabah')
+        ->join('kualitas', 'kualitas.idGabah', '=', 'gudangs.id')
+        ->select('kualitas','beras.*')
+        // ->whereNull('tanggalPenggilingan')
+        ->get();
 		return view('beras/show', ['beras'=>$beras]);
 	}
 
