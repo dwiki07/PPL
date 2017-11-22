@@ -5,7 +5,7 @@
 <div class="container">
 	<center><h2>Gudang Beras</h2> </center>
 	<div class="table-responsive">          
-		<table class="table table-striped"> {{-- ini table --}}
+		<table class="table table-striped" style="width: 1060px"> {{-- ini table --}}
 			<thead>
 				<tr>
 					<th>Id Beras</th>

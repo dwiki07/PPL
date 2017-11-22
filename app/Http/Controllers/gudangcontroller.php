@@ -7,11 +7,12 @@ use DB;
 use App\gudang;
 use App\supplier;
 use App\Http\Controllers\Controller;
-use session;
+use Session;
 class gudangcontroller extends Controller
 {
     //
 	public function index(Request $Request) {
+
 
 		$gudang = DB::table('gudangs')
         ->join('suppliers', 'suppliers.id', '=', 'gudangs.idSupplier')
@@ -19,13 +20,16 @@ class gudangcontroller extends Controller
         ->whereNull('tanggalPenggilingan')
         // ->where('tanggalPenggilingan' ,'IS NULL', null)
         ->get();
+
+        	
 		return view('gudang/show', ['gudang' => $gudang]);
 	}
 
 	public function create()
 	{
 		$supplier = supplier::all();
-
+	
+		Session::flash('message', 'This is a message!');
 		return view('gudang/create', ['supplier' => $supplier]);
 
 	}
@@ -38,6 +42,7 @@ class gudangcontroller extends Controller
 		$gudang->hargaGabah = $request->hargaGabah;
 		$gudang-> save();
 
+        	Session::flash('message', 'Data Berhasil Disimpan!');
 		return redirect('gudang');
 
 	}

@@ -124,40 +124,48 @@ desired effect
           <!-- Optionally, you can add icons to the links -->
           <li ><a href="beranda"><i class="fa fa-home"></i> <span>Beranda</span></a></li>
           <li class="treeview">
-          <a href="#"><i class="fa fa-cubes"></i> <span>Gudang</span>
-            <span class="pull-right-container">
+            <a href="#"><i class="fa fa-cubes"></i> <span>Gudang</span>
+              <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="gudang">Gabah</a></li>
-            <li><a href="beras">Beras</a></li>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="gudang">Gabah</a></li>
+              <li><a href="beras">Beras</a></li>
+            </ul>
+            <li ><a href="supplier"><i class="fa fa-users"></i> <span>Supplier</span></a></li>
           </ul>
-          <li ><a href="supplier"><i class="fa fa-users"></i> <span>Supplier</span></a></li>
-        </ul>
-        <!-- /.sidebar-menu -->
-      </section>
-      <!-- /.sidebar -->
-    </aside>
+          <!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+      </aside>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
-      <!-- Main content -->
-      <section class="content container-fluid">
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <!-- Main content -->
+        <section class="content container-fluid">
 
       <!--------------------------
         | Your Page Content Here |
 
         -------------------------->
-        @yield('content')
+       
+         @if(Session::has('message'))
+         <p class="alert alert-info">{{ Session::get('message') }}</p>
+         
+         @endif
+         <br>
+         <br>
+        <div class="panel panel-primary" style="width: 1100px;border-color: lightblue">
+         @yield('content')
+       </div>
+     </div>
 
-      </div>
-
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+   </section>
+   <!-- /.content -->
+ </div>
+ <!-- /.content-wrapper -->
 </div>
 <!-- ./wrapper -->
 

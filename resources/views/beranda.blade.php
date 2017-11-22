@@ -4,7 +4,7 @@
 <div class="container">
 	<center><h2>Quality History</h2></center><br>
 	<div class="table-responsive">          
-		<table class="table table-striped"> {{-- ini table --}}
+		<table class="table table-striped" style="width: 1060px"> {{-- ini table --}}
 			<thead>
 				<tr>
 					<th>Id Kualitas</th>

@@ -2,9 +2,10 @@
 
 @section('content')
 <div class="container">
+	<center><h2>Supplier</h2> </center>
 	 <a href="/supplier/create" class="btn btn-info" role="button" > <i class="fa fa-plus"></i> Create</a>
 	<div class="table-responsive">          
-		<table class="table table-striped"> {{-- ini table --}}
+		<table class="table table-striped" style="width: 1060px"> {{-- ini table --}}
 			<thead>
 				<tr>
 					<th>Id Supplier</th>
