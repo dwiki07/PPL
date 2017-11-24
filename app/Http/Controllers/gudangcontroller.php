@@ -66,7 +66,7 @@ class gudangcontroller extends Controller
 		$gudang->hargaGabah = $request->hargaGabah;
 		
 		$gudang-> save();
-
+		Session::flash('message', 'Data Berhasil Diperbaharui!');
 		return redirect('gudang');
 	}	
 }
