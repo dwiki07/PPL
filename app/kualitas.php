@@ -8,5 +8,5 @@ class kualitas extends Model
 {
     protected $table ='kualitas';
     protected $guarded = ['id_gabah','created_at', 'update_at'];
-    public $timestamps=false; 
+    
 }

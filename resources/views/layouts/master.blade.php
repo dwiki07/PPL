@@ -53,7 +53,7 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini" ">
   <div class="wrapper">
 
     <!-- Main Header -->
@@ -62,7 +62,7 @@ desired effect
       <!-- Logo -->
       <a href="index2.html" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>A</b>LT</span>
+        <span class="logo-mini"><b>S</b>RS</span>
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg"><b>SKURAS</b></span>
       </a>
@@ -81,15 +81,14 @@ desired effect
               <!-- Menu Toggle Button -->
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <!-- The user image in the navbar-->
-                <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                <img src="ganteng.jpg" class="user-image" alt="User Image">
                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                <span class="hidden-xs">Alexander Pierce</span>
+                <span class="hidden-xs">{{ Auth::user()->name }}</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- The user image in the menu -->
                 <li class="user-header">
-                  <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
+                  <img src="ganteng.jpg" class="img-circle" alt="User Image">
                   <p>
                     Alexander Pierce - Web Developer
                     <small>Member since Nov. 2012</small>
@@ -103,7 +102,9 @@ desired effect
                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                   </div>
                   <div class="pull-right">
-                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                    <a href="/logout" class="btn btn-default btn-flat">Sign out</a>
+
+
                   </div>
                 </li>
               </ul>
@@ -121,43 +122,50 @@ desired effect
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu" data-widget="tree">
           <!-- Optionally, you can add icons to the links -->
-          <li ><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-          <li class="active"><a href="#"><i class="fa fa-list-alt"></i> <span>Kualitas</span></a></li>
+          <li ><a href="beranda"><i class="fa fa-home"></i> <span>Beranda</span></a></li>
           <li class="treeview">
-            <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+            <a href="#"><i class="fa fa-cubes"></i> <span>Gudang</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#">Link in level 2</a></li>
-              <li><a href="#">Link in level 2</a></li>
+              <li><a href="gudang">Gabah</a></li>
+              <li><a href="beras">Beras</a></li>
             </ul>
-          </li>
-        </ul>
-        <!-- /.sidebar-menu -->
-      </section>
-      <!-- /.sidebar -->
-    </aside>
+            <li ><a href="supplier"><i class="fa fa-users"></i> <span>Supplier</span></a></li>
+          </ul>
+          <!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+      </aside>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
-      <!-- Main content -->
-      <section class="content container-fluid">
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <!-- Main content -->
+        <section class="content container-fluid">
 
       <!--------------------------
         | Your Page Content Here |
 
         -------------------------->
-        @yield('content')
+       
+         @if(Session::has('message'))
+         <p class="alert alert-info">{{ Session::get('message') }}</p>
+         
+         @endif
+         <br>
+         <br>
+        <div class="panel panel-primary" style="width: 1100px;border-color: lightblue">
+         @yield('content')
+       </div>
+     </div>
 
-      </div>
-
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+   </section>
+   <!-- /.content -->
+ </div>
+ <!-- /.content-wrapper -->
 </div>
 <!-- ./wrapper -->
 

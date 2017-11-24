@@ -3,37 +3,46 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;	
 use App\gudang;
+use App\supplier;
 use App\Http\Controllers\Controller;
-use session;
+use Session;
 class gudangcontroller extends Controller
 {
     //
 	public function index(Request $Request) {
 
-		$gudang = gudang::all();
 
+		$gudang = DB::table('gudangs')
+        ->join('suppliers', 'suppliers.id', '=', 'gudangs.idSupplier')
+        ->select('namaSupplier','gudangs.*')
+        ->whereNull('tanggalPenggilingan')
+        // ->where('tanggalPenggilingan' ,'IS NULL', null)
+        ->get();
+
+        	
 		return view('gudang/show', ['gudang' => $gudang]);
 	}
 
 	public function create()
 	{
-		return view('gudang/create');
+		$supplier = supplier::all();
+	
+		Session::flash('message', 'This is a message!');
+		return view('gudang/create', ['supplier' => $supplier]);
 
 	}
 	public function store(Request $request) {
 		$gudang = new gudang;
-		$gudang->tangalPenerimaan = $request->tanggalPenerimaan;
+		$gudang->idSupplier = $request->supplier;
+		$gudang->tanggalPenerimaan = $request->tanggalPenerimaan;
 		$gudang->tanggalPenggilingan = $request->tanggalPenggilingan;
 		$gudang->jumlahGabah = $request->jumlahGabah;
 		$gudang->hargaGabah = $request->hargaGabah;
-		$gudang->IdSupplier = $request->IdSupplier;
-		$gudang->tanggalMasuk = $request->tanggalMasuk;
-		$gudang->tanggalKeluar = $request->tanggalKeluar;
-		$gudang->jumlahBeras= $request->jumlahBeras;
-
 		$gudang-> save();
 
+        	Session::flash('message', 'Data Berhasil Disimpan!');
 		return redirect('gudang');
 
 	}
@@ -41,30 +50,23 @@ class gudangcontroller extends Controller
 	public function edit($id) {
 
 		$gudang = gudang::find($id);
+		$supplier = supplier::all();
 
 		if(!$gudang)
 			abort(404);
-		return view('gudang/edit', ['gudang' => $gudang]);
+		return view('gudang/edit', ['gudang' => $gudang,'supplier'=>$supplier]);
 	}
 
 	public function update($id , Request $request) {
 		$gudang = gudang::find($id);
-		$gudang->tangalPenerimaan = $request->tanggalPenerimaan;
+		$gudang->idSupplier = $request->supplier;
+		$gudang->tanggalPenerimaan = $request->tanggalPenerimaan;
 		$gudang->tanggalPenggilingan = $request->tanggalPenggilingan;
 		$gudang->jumlahGabah = $request->jumlahGabah;
 		$gudang->hargaGabah = $request->hargaGabah;
-		$gudang->IdSupplier = $request->IdSupplier;
-		$gudang->tanggalMasuk = $request->tanggalMasuk;
-		$gudang->tanggalKeluar = $request->tanggalKeluar;
-		$gudang->jumlahBeras= $request->jumlahBeras;
+		
 		$gudang-> save();
 
 		return redirect('gudang');
 	}	
-	public function destroy($id) {
-		$gudang = gudang::find($id);
-		$gudang->delete();
-
-		return redirect('gudang');
-	}
 }

@@ -2,20 +2,18 @@
 
 @section('content')
 <div class="container">
+	<center><h2>Gudang Gabah</h2> </center>
 	 <a href="/gudang/create" class="btn btn-info" role="button" > <i class="fa fa-plus"></i> Create</a>
+
 	<div class="table-responsive">          
-		<table class="table"> {{-- ini table --}}
+		<table class="table table-striped" style="width: 1060px"> {{-- ini table --}}
 			<thead>
 				<tr>
+					<th>Nama Supplier</th>
 					<th>Id Gabah</th>
 					<th>Tanggal Penerimaan</th>
-					<th>Tanggal Penggilingan</th>
-					<th>Jumlah Gabah</th>
+					<th>Jumlah Gabah (Ton)</th>
 					<th>Harga Gabah</th>
-					<th>ID Supplier</th>
-					<th>Tanggal Masuk </th>
-					<th>Tanggal Keluar</th>
-					<th>Jumlah Beras</th>
 					<th>Action</th>
 				</tr>
 			</thead>
@@ -24,13 +22,13 @@
 				@foreach($gudang as $gudang)
 				<tr>
 					<td>
+						{{$gudang->namaSupplier}}
+					</td>
+					<td>
 						{{$gudang->id}}
 					</td>
 					<td>
 						{{$gudang->tanggalPenerimaan}}
-					</td>
-					<td>
-						{{$gudang->tanggalPenggilingan}}
 					</td>
 					<td>
 						{{$gudang->jumlahGabah}}
@@ -38,36 +36,21 @@
 					<td>
 						{{$gudang->hargaGabah}}
 					</td>
+
 					<td>
-						{{$gudang->IdSupplier}}
-					</td>
-					<td>
-						{{$gudang->tanggalMasuk}}
-					</td>
-					<td>
-						{{$gudang->tanggalKeluar}}
-					</td>
-					<td>
-						{{$gudang->jumlahBeras}}
-					</td>
-					<td>
+						
 						<button class="btn btn-info" onclick="location.href='/gudang/{{$gudang->id}}/edit';" >Edit
 						</button>
+						<button class="btn btn-info" onclick="location.href='/kualitas/{{$gudang->id}}/create';" >Check
+						</button>
 					</td>
-					<td>
-						<form action="/gudang/{{$gudang->id}}" method="post">
-							<input class="btn btn-info" type="submit" name="submit" value="Delete"/>
-
 							{{csrf_field()}}
-							<input type="hidden" name="_method" value="delete"/>
-						</form>
-					</td>
 				</tr>
 				@endforeach
 			</tbody>
 		</table>
 	</div>
 </div>
-
+</div>
 @endsection
 
