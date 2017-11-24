@@ -25,10 +25,6 @@
 	<input type="date" name="tanggalPenerimaan" value="{{$gudang->tanggalPenerimaan}}" /><hr>
 	<div class="col-md-4"></div>
 	<div class="col-md-3">
-	Tanggal Penggilingan</div> 
-	<input type="date" name="tanggalPenggilingan" value="{{$gudang->tanggalPenggilingan}}"/> <hr>
-	<div class="col-md-4"></div>
-	<div class="col-md-3">
 	Jumlah Gabah </div>
 	<input type="text" name="jumlahGabah" value="{{$gudang->jumlahGabah}}"/> <hr>
 	<div class="col-md-4"></div>

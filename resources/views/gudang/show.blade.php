@@ -34,7 +34,7 @@
 						{{$gudang->jumlahGabah}}
 					</td>
 					<td>
-						{{$gudang->hargaGabah}}
+						Rp.{{$gudang->hargaGabah}},00
 					</td>
 
 					<td>

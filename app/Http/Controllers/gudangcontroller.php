@@ -29,7 +29,6 @@ class gudangcontroller extends Controller
 	{
 		$supplier = supplier::all();
 	
-		Session::flash('message', 'This is a message!');
 		return view('gudang/create', ['supplier' => $supplier]);
 
 	}

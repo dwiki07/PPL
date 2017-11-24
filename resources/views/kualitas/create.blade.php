@@ -24,7 +24,7 @@
     <label>Jumlah Beras</label></div>
     <div class="col-md-1">
       <div class="col-md-6">
-    <input type="number" name="jumlahBeras" style="width: 200px">
+    <input type="number" name="jumlahBeras" class="required" required="" style="width: 200px">
     </div>
   </div>
     </div> <br>

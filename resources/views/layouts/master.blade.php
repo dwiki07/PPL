@@ -150,13 +150,16 @@ desired effect
         | Your Page Content Here |
 
         -------------------------->
-       
-         @if(Session::has('message'))
-         <p class="alert alert-info">{{ Session::get('message') }}</p>
-         
-         @endif
-         <br>
-         <br>
+
+        @if(Session::has('message'))
+        <div class="alert alert-info alert-dismissable fade in">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+           {{ Session::get('message') }}
+        </div>
+
+        @endif
+        <br>
+        <br>
         <div class="panel panel-primary" style="width: 1100px;border-color: lightblue">
          @yield('content')
        </div>
