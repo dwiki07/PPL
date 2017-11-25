@@ -18,7 +18,7 @@
 	<div class="col-md-4"></div>
 	<div class="col-md-3">
 	Nomor Telepon </div>
-	<input type="text" name="nomorTelepon" value="{{$supplier->nomorTelepon}}" style="width: 200px"/> <hr>
+	<input type="tel" pattern="^\d{12}$" name="nomorTelepon" value="{{$supplier->nomorTelepon}}" style="width: 200px"/> <hr>
 	<div class="col-md-8"></div>
 	<a href="/supplier" class="btn btn-warning" role="button">Cancel</a>
 	<input class="btn btn-info" type="submit" name="submit" value="save"  > 
