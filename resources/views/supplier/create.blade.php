@@ -20,7 +20,11 @@
 	<div class="col-md-3"></div>
 	<div class="col-md-3">
 	Nomor Telepon </div>
+<<<<<<< HEAD
 	<input type="number" name="nomorTelepon" class="required" required="" style="width: 220px"/> <hr>
+=======
+	<input type="tel" pattern="^\d{12}$"  name="nomorTelepon" style="width: 220px"/> <hr>
+>>>>>>> d54ac960c8373b14fe6c1390c45564831947eb0b
 	<div class="col-md-7"></div>
 	<a href="/supplier" class="btn btn-warning" role="button" style="width: 76px">Cancel</a>
 	<input class="btn btn-info" type="submit" name="submit" value="save" style="width: 76px" > 
