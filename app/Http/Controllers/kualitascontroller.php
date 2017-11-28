@@ -6,24 +6,21 @@ use Illuminate\Http\Request;
 use App\kualitas;
 use Carbon\Carbon;
 use App\Http\Controllers\Controller;
-use session;
-use App\gudang;
+use App\gabah;
 use App\beras;
 use Redirect;
+use Session;
 class kualitascontroller extends Controller
 {
-	public function index(){
-		$kualitas=kualitas::all();
-		return view ('kualitas/show', ['kualitas' => $kualitas]);	
-	}
-
 	public function check(Request $Request){
 		
-		$gudang = gudang::find($Request->gabah);
+		$gabah = gabah::find($Request->gabah);
 		$current_time = Carbon::now()->toDateString();
 		
-		if ($Request->jumlahBeras>$gudang->jumlahGabah) {
-			dd("inputan salah");
+		if ($Request->jumlahBeras>$gabah->jumlahGabah) {
+
+				Session::flash('message', 'Inputan salah jumlah beras harus < jumlah Gabah');
+					return back();
 		}else{
 			$beras = new beras;
 			$beras->idGabah			= $Request->gabah;
@@ -31,8 +28,8 @@ class kualitascontroller extends Controller
 			$beras->jumlahBeras		= $Request->jumlahBeras;
 			$beras->save();
 
-			$gudang->tanggalPenggilingan	=$current_time;
-			$gudang->save();
+			$gabah->tanggalPenggilingan	=$current_time;
+			$gabah->save();
 		}
 
 		$hama 					=$Request->cek_hama;
@@ -86,9 +83,9 @@ class kualitascontroller extends Controller
 
 	}
 	public function create($id){
-		$gudang = gudang::all();	
+		$gabah = gabah::all();	
 
-		return view('kualitas/create', ['gudang' => $gudang,'id' => $id]);
+		return view('kualitas/create', ['gabah' => $gabah,'id' => $id]);
 	}
 
 	public function checkHasil(){

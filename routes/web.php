@@ -30,11 +30,11 @@ Auth::routes();
 
 Route::get('beranda', 'berandacontroller@index');
 
-route::get('gudang/create','gudangcontroller@create');
-route::get('gudang','gudangcontroller@index');
-route::get('gudang/{id}/edit','gudangcontroller@edit');
-route::put('gudang/{id}','gudangcontroller@update');
-route::post('gudang','gudangcontroller@store');
+route::get('gabah/create','gabahcontroller@create');
+route::get('gabah','gabahcontroller@index');
+route::get('gabah/{id}/edit','gabahcontroller@edit');
+route::put('gabah/{id}','gabahcontroller@update');
+route::post('gabah','gabahcontroller@store');
 
 route::get('beras/create','berascontroller@create');
 route::get('beras','berascontroller@index');

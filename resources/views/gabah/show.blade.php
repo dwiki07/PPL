@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 	<center><h2>Gudang Gabah</h2> </center>
-	 <a href="/gudang/create" class="btn btn-info" role="button" > <i class="fa fa-plus"></i> Create</a>
+	 <a href="/gabah/create" class="btn btn-info" role="button" > <i class="fa fa-plus"></i> Create</a>
 
 	<div class="table-responsive">          
 		<table class="table table-striped" style="width: 1060px"> {{-- ini table --}}
@@ -19,29 +19,29 @@
 			</thead>
 			<tbody>
 
-				@foreach($gudang as $gudang)
+				@foreach($gabah as $gabah)
 				<tr>
 					<td>
-						{{$gudang->namaSupplier}}
+						{{$gabah->namaSupplier}}
 					</td>
 					<td>
-						{{$gudang->id}}
+						{{$gabah->id}}
 					</td>
 					<td>
-						{{$gudang->tanggalPenerimaan}}
+						{{$gabah->tanggalPenerimaan}}
 					</td>
 					<td>
-						{{$gudang->jumlahGabah}}
+						{{$gabah->jumlahGabah}}
 					</td>
 					<td>
-						Rp.{{$gudang->hargaGabah}},00
+						Rp.{{$gabah->hargaGabah}},00
 					</td>
 
 					<td>
 						
-						<button class="btn btn-info" onclick="location.href='/gudang/{{$gudang->id}}/edit';" >Edit
+						<button class="btn btn-info" onclick="location.href='/gabah/{{$gabah->id}}/edit';" >Edit
 						</button>
-						<button class="btn btn-info" onclick="location.href='/kualitas/{{$gudang->id}}/create';" >Check
+						<button class="btn btn-info" onclick="location.href='/kualitas/{{$gabah->id}}/create';" >Check
 						</button>
 					</td>
 							{{csrf_field()}}

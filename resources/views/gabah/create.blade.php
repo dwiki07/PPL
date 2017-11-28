@@ -2,7 +2,7 @@
 
 @section('content')
 
-<form action="/gudang" method="post">
+<form action="/gabah" method="post">
 	<h3 align="center">CREATE</h3>
 	<br>
 	<br>
@@ -31,9 +31,9 @@
 	<div class="col-md-4"></div>
 	<div class="col-md-3">
 	Harga Gabah</div>
-	<input type="text" name="hargaGabah" class="required" required="" style="width: 200px" /> <hr>
+	<input type="number" name="hargaGabah" class="required" required="" style="width: 200px" /> <hr>
 	<div class="col-md-8"></div>
-	<a href="/gudang" class="btn btn-warning" role="button">Cancel</a>
+	<a href="/gabah" class="btn btn-warning" role="button">Cancel</a>
 	<input class="btn btn-info" type="submit" name="submit" value="save"  > 
 
 	{{ csrf_field() }}

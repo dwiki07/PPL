@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\supplier;
 use Illuminate\Http\Request;
-use sesion;	
+use Session;	
 class supplierController extends Controller
 {
 	public function index(Request $Request) {
@@ -23,7 +23,8 @@ class supplierController extends Controller
 		$supplier->nomorTelepon = $request->nomorTelepon;
 
 		$supplier-> save();
-
+		Session::flash('message', 'Data Berhasil Disimpan!');
+		return redirect('gudang');
 		return redirect('supplier');
 
 	}
@@ -42,7 +43,8 @@ class supplierController extends Controller
 		$supplier->alamatSupplier = $request->alamatSupplier;
 		$supplier->nomorTelepon = $request->nomorTelepon;
 		$supplier-> save();
-
+		Session::flash('message', 'Data Berhasil Diperbaharui!');
+		return redirect('gudang');
 		return redirect('supplier');
 	}	
 }

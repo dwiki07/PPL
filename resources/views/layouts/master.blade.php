@@ -130,7 +130,7 @@ desired effect
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="gudang">Gabah</a></li>
+              <li><a href="gabah">Gabah</a></li>
               <li><a href="beras">Beras</a></li>
             </ul>
             <li ><a href="supplier"><i class="fa fa-users"></i> <span>Supplier</span></a></li>

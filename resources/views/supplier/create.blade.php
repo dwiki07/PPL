@@ -12,15 +12,15 @@
 	<div class="col-md-3">
 	Nama Supplier
 	</div>
-	<input style="width: 220px" type="text" name="namaSupplier"/><hr>
+	<input style="width: 220px" type="text" class="required"  required="" name="namaSupplier"/><hr>
 	<div class="col-md-3"></div>
 	<div class="col-md-3">
 	Alamat Supplier</div> 
-	<input type="text" name="alamatSupplier" style="width: 220px"/> <hr>
+	<input type="text" name="alamatSupplier" class="required" required="" style="width: 220px"/> <hr>
 	<div class="col-md-3"></div>
 	<div class="col-md-3">
 	Nomor Telepon </div>
-	<input type="text" name="nomorTelepon" style="width: 220px"/> <hr>
+	<input type="number" name="nomorTelepon" class="required" required="" style="width: 220px"/> <hr>
 	<div class="col-md-7"></div>
 	<a href="/supplier" class="btn btn-warning" role="button" style="width: 76px">Cancel</a>
 	<input class="btn btn-info" type="submit" name="submit" value="save" style="width: 76px" > 

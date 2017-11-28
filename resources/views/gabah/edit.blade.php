@@ -3,8 +3,8 @@
 @section('content')
 
 
-<form action="/gudang/{{$gudang->id}}" method="post">
-	<h3 align="center">EDIT gudang</h3>
+<form action="/gabah/{{$gabah->id}}" method="post">
+	<h3 align="center">EDIT gabah</h3>
 	<br>
 	<div class="col-md-4"></div>
 	<div class="col-md-3">
@@ -22,17 +22,17 @@
 	<div class="col-md-3">
 		Tanggal Penerimaan 
 	</div>
-	<input type="date" name="tanggalPenerimaan" value="{{$gudang->tanggalPenerimaan}}" /><hr>
+	<input type="date" name="tanggalPenerimaan" value="{{$gabah->tanggalPenerimaan}}" /><hr>
 	<div class="col-md-4"></div>
 	<div class="col-md-3">
 	Jumlah Gabah </div>
-	<input type="text" name="jumlahGabah" value="{{$gudang->jumlahGabah}}"/> <hr>
+	<input type="text" name="jumlahGabah" value="{{$gabah->jumlahGabah}}"/> <hr>
 	<div class="col-md-4"></div>
 	<div class="col-md-3">
 	Harga Gabah</div>
-	<input type="text" name="hargaGabah" value="{{$gudang->hargaGabah}}"> <hr>
+	<input type="text" name="hargaGabah" value="{{$gabah->hargaGabah}}"> <hr>
 	<div class="col-md-8"></div>
-	<a href="/gudang" class="btn btn-warning" role="button">Cancel</a>
+	<a href="/gabah" class="btn btn-warning" role="button">Cancel</a>
 	<input class="btn btn-info" type="submit" name="submit" value="save"  > 
 
 	{{ csrf_field() }}

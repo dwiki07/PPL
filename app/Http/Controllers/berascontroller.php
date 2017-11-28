@@ -10,12 +10,7 @@ class berascontroller extends Controller
 {
     public function index(Request $Request) {
 
-		$beras = DB::table('beras')
-		->join('gudangs', 'gudangs.id', '=', 'beras.idGabah')
-        ->join('kualitas', 'kualitas.idGabah', '=', 'gudangs.id')
-        ->select('kualitas','beras.*')
-        // ->whereNull('tanggalPenggilingan')
-        ->get();
+		$beras= beras::Beras()->get();
 		return view('beras/show', ['beras'=>$beras]);
 	}
 
