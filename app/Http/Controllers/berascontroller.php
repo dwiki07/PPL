@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use App\beras;
 use Illuminate\Http\Request;
 use session;
-use DB;
 use App\Http\Controllers\Controller;
 class berascontroller extends Controller
 {
