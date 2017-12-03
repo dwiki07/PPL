@@ -23,8 +23,14 @@ Route::get('/index', function () {
 Route::get('hasil', 'kualitascontroller@hasilCheck');
 Route::get('kualitas', 'kualitascontroller@index');
 Route::get('kualitas/{id}/create', 'kualitascontroller@create');
-route::post('kualitas','kualitascontroller@store');
+Route::post('kualitas','kualitascontroller@store');
 Route::post('kualitas/check', 'kualitascontroller@check');
+
+Route::get('admin/login','admin\authController@showLoginForm');
+Route::post('admin/login','admin\authController@login');
+Route::get('admin/logout','admin\authController@logout');
+Route::get('admin/register','admin\authController@showRegistrationForm');
+Route::post('admin/register','admin\authController@Register');
 
 Auth::routes();
 
